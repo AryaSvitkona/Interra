@@ -1,0 +1,175 @@
+@charset "utf-8";
+/*
+Theme Name: Interra
+Theme URI: http://none.ch
+Author: Stefano Rutishauser
+Author URI: http://portfolio.projectlearning.ch
+Description: The following WP theme was made as test for the SBW Haus des Lernens. It's only a test template for noncommercial use.
+Version: 1.0
+Tags: intranet, sbw, layout, light, white,
+Text Domain: interra
+*/
+/* General */
+html{
+	background: url(img/bg_plc.jpg) no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover;
+	
+}
+body{
+	margin:0px;
+	padding:0px;
+	font-family:Helvetica,Verdana,sans-serif;
+}
+p{
+	padding:0px;
+	margin:0px;
+}
+.flt-r{float:right;}
+.flt-l{float:left;}
+
+/*Header*/
+header{
+	width:100%;
+	background:#FFFFFF;
+	border-bottom:solid 2px #00AEEF;
+}
+header ul{
+	margin:0;
+	padding:10px 0 0 0;
+}
+header li{
+	float: left;
+	padding: 5px 20px;
+	list-style:none;
+	border-radius: 3px 3px 0px 0px;
+	border: 1px solid #ccc;
+	background-color:#ffffff;
+	transition: background-color 0.5s;
+	bottom: 0px;
+}
+header li:hover{
+	background-color:#00AEEF;
+	padding: 8px 20px 5px 20px;
+}
+header li a{
+	font-family:Helvetica, sans-serif;
+	color:#CCC;
+	text-shadow: -1px -1px 0px rgba(150, 150, 150, 1);
+	text-decoration:none;
+	display:block;
+}
+header li a:hover{
+	color:#FFF;
+}
+#menue{
+	width:760px;
+}
+#wrapper{
+	margin-top:0px;
+	max-width:1440px;
+	margin-left:auto;
+	margin-right:auto;
+	overflow:auto;
+}
+.box{
+	width:23.61111111%;
+	height: 150px;
+	margin:0.694444444%;
+	background-color:#FFF;
+	float:left;
+	color:#bbb;
+	text-shadow: -1px -1px 0px #999;
+	position:relative;
+	border-radius: 10px;
+}
+.box li{
+	list-style:none;
+	bottom:0;
+	height: 100%
+}
+.box li h1{
+	font-size:150%;
+	margin: 0;
+	padding: 10px 0 0 10px;
+}
+.box li a{
+	color:#bbb;
+	text-shadow: -1px -1px 0px #999;
+	text-decoration:none;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.box .description{
+	display: block;
+	background-color: #ddd;
+	padding: 10px;
+	position: absolute;
+}
+.box h4{
+	font-size:80%;
+	margin:0px;
+	padding:0px;
+}
+.box li p{
+	color:#000;
+	text-shadow:none;
+	font-size:11px;
+	padding:0px;
+	margin:0px;
+}
+/*footer */
+footer{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	background:#FFF;
+	border-top: solid 2px #00AEEF;
+}
+#footer_middle{
+	margin-left:auto;
+	margin-right:auto;
+	width:350px;
+	padding:20px 0 20px 0;
+	box-sizing:border-box;
+	color:#bbb;
+	text-align:center;
+	text-shadow: -1px -1px 0px #999;
+	font-size:18px;
+}
+
+/* search form 
+-------------------------------------- */
+#searchform{
+	font-family:Helvetica,Verdana,sans-serif;
+}
+.screen-reader-text {
+	display:none;
+}
+#searchsubmit {
+	background-color:#fff;
+	color:#CCC;
+	text-decoration:none;
+	text-shadow: -1px -1px 0px rgba(150, 150, 150, 1);
+	font-size:16px;
+	border:1px #CCC solid;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+
+#searchsubmit:hover {
+	color:#ffffff;
+	background-color:#00AEEF;
+	text-shadow:none;
+}
+
+#searchsubmit:active {
+	position:relative;
+	top:1px;
+}

@@ -36,32 +36,45 @@ Text Domain: interra
    'taxonomy'           => 'category',
    'walker'             => null
 ); ?>
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+      <div id="meta">
+            <p>erstellt am: <?php the_date('d.m.Y'); ?> |
+            von: <?php the_author(); ?> |
+            Kategorie(n): <?php the_category(', '); ?></p>
+         </div>
+      <div class="entry">
+         <?php the_content(); ?>
+      </div>
+   <?php endwhile; ?>
+ 
+      <p align="center"><?php next_post_link('homo'); ?> | <?php previous_post_link('nextink'); ?></p>
+ 
+   <?php endif; ?>
+
+
 <div id="wrapper">
-   <div id="categories">
+
+
+
+
+
+
+   <div id="content">
       <?php
          $categories=get_categories($args);
          foreach($categories as $category) { 
          ?>
          <div class="box">
             <li>
-               <h1><a href="<?php echo get_category_link( $category->term_id ); ?>"> <?php  echo $category->name;?></a> </h1>
+               <h1><a href="<?php echo esc_url( $category_link ); ?>"> <?php  echo $category->name; echo $category->cat_ID;?></a> </h1>
                <div class="description"><h4> Description:</h4><p><?php echo $category->description; ?></p></div>
             </li>
          </div>
          <?php
          } 
       ?> 
-   </div>
-   <div style="clear:both;"></div>
-   <div id="w-posts">
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-            <div class="entry">
-               <?php the_excerpt(); ?>
-            </div>
-         <?php endwhile; ?>
-         <p align="center"><?php next_post_link('homo'); ?> | <?php previous_post_link('nextink'); ?></p>
-      <?php endif; ?>
-   </div>
+    </div>
 </div>
 <?php get_footer(); ?>

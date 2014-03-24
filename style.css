@@ -16,7 +16,6 @@ html{
 	-moz-background-size: cover;
  	-o-background-size: cover;
 	background-size: cover;
-	
 }
 body{
 	margin:0px;
@@ -35,6 +34,21 @@ header{
 	width:100%;
 	background:#FFFFFF;
 	border-bottom:solid 2px #00AEEF;
+	position: fixed;
+	top:0;
+	left:0;
+}
+li.current-menu-item {
+background:#00AEEF;
+text-shadow:none;
+}
+li.current-menu-item a{
+color: #fff;
+}
+
+.title{
+	font-size: 140%;
+	font-weight: bold;
 }
 header ul{
 	margin:0;
@@ -46,13 +60,13 @@ header li{
 	list-style:none;
 	border-radius: 3px 3px 0px 0px;
 	border: 1px solid #ccc;
+	border-bottom: none;
 	background-color:#ffffff;
 	transition: background-color 0.5s;
 	bottom: 0px;
 }
 header li:hover{
 	background-color:#00AEEF;
-	padding: 8px 20px 5px 20px;
 }
 header li a{
 	font-family:Helvetica, sans-serif;
@@ -65,18 +79,28 @@ header li a:hover{
 	color:#FFF;
 }
 #menue{
-	width:760px;
+	width:100%;
 }
+/* Content */
 #wrapper{
-	margin-top:0px;
+	margin-top:100px;
 	max-width:1440px;
 	margin-left:auto;
 	margin-right:auto;
 	overflow:auto;
 }
+#content{
+	height: 100%;
+}
+#w-posts{
+	margin: 20px 0 20px 0;
+	background: rgba(255 , 255, 255, 0.4);
+	border-radius: 10px;
+	padding: 20px;
+}
 .box{
 	width:23.61111111%;
-	height: 150px;
+	height: 180px;
 	margin:0.694444444%;
 	background-color:#FFF;
 	float:left;
@@ -103,16 +127,19 @@ header li a:hover{
 	height: 100%;
 	width: 100%;
 }
-.box .description{
+.description{
 	display: block;
-	background-color: #ddd;
+	background-color: #00AAEF;
 	padding: 10px;
 	position: absolute;
+	bottom: 0;
+	border-radius: 0 0 10px 10px;
 }
 .box h4{
 	font-size:80%;
 	margin:0px;
 	padding:0px;
+	color: #ffffff;
 }
 .box li p{
 	color:#000;
@@ -123,7 +150,6 @@ header li a:hover{
 }
 /*footer */
 footer{
-	position:fixed;
 	bottom:0px;
 	width:100%;
 	background:#FFF;

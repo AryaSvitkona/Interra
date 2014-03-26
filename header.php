@@ -12,7 +12,13 @@
 
 </head>
 <body>
-	<header>
+	<?php
+if ( is_user_logged_in() ) {
+    ?>
+    <header class="head-logged-in"><?php
+} else {
+    ?>
+    <header><?php }?>
         <div id="menue">
             <div id="w-title">
                 <a class="title" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>

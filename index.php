@@ -2,7 +2,7 @@
 Theme Name: Interra
 Theme URI: http://none.ch
 Author: Stefano Rutishauser
-Author URI: http://portfolio.projectlearning.ch
+Author URL: http://portfolio.projectlearning.ch
 Description: The following WP theme was made as a test for the SBW Haus des Lernens. It's only a test template for noncommercial use.
 Version: 1.0
 Tags: intranet, sbw, layout, light, white,
@@ -53,15 +53,37 @@ Text Domain: interra
       ?> 
    </div>
    <div style="clear:both;"></div>
+   <?php 
+   // now get it in any place you want, even inside another function
+function do_something_cool()
+{
+   $other_var = youruniquekey_get_var();
+   echo $other_var; // show the global variable
+}
+do_something_cool();
+
+echo $other_var;
+
+   ?>
    <div id="w-posts">
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-            <div class="entry">
-               <?php the_excerpt(); ?>
+      <?php
+         $dir    = '../';
+         $files1 = scandir($dir);
+            foreach($files1 as $filename) {
+            if ($filename != "." && $filename != "..") {
+            ?>
+            <div class="file-box">
+               <li>
+                  <?php
+                     echo '<h1><a href="#">' . $filename.'</a></h1> in <span class="file-categorie"><a href='.get_category_link( $category->term_id ).'>'.$category->name.'</a></span> ';
+                  ?>
+               </li>
             </div>
-         <?php endwhile; ?>
-         <p align="center"><?php next_post_link('homo'); ?> | <?php previous_post_link('nextink'); ?></p>
-      <?php endif; ?>
+            <?php
+               }
+           }
+      ?>
+   <div style="clear:both;"></div>
    </div>
 </div>
 <?php get_footer(); ?>

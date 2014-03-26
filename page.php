@@ -47,36 +47,13 @@ Text Domain: interra
       <div class="entry">
          <?php the_content(); ?>
       </div>
-   <?php endwhile; ?>
- 
-      <p align="center"><?php next_post_link('homo'); ?> | <?php previous_post_link('nextink'); ?></p>
- 
+   <?php endwhile; ?> 
    <?php endif; ?>
 
 
 <div id="wrapper">
-
-
-
-
-
-
    <div id="content">
-      <?php
-         $categories=get_categories($args);
-         foreach($categories as $category) { 
-         ?>
-         <div class="box">
-            <li>
-               <?php
-                  echo '<h1><a href="#">' . $category->name.'</a> </h1> ';
-                  echo '<div class="description"><h4> Description:</h4><p>'. $category->description . '</p></div>';
-               ?>
-            </li>
-         </div>
-         <?php
-         } 
-      ?> 
+      <h2> Homo Text </h2>
     </div>
 </div>
 <?php get_footer(); ?>

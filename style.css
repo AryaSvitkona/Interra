@@ -10,6 +10,8 @@ Tags: intranet, sbw, layout, light, white,
 Text Domain: interra
 */
 /* General */
+
+
 html{
 	background: url(img/bg_plc.jpg) no-repeat center center fixed; 
  	-webkit-background-size: cover;
@@ -34,9 +36,9 @@ header{
 	width:100%;
 	background:#FFFFFF;
 	border-bottom:solid 2px #00AEEF;
-	position: fixed;
 	top:0;
 	left:0;
+	position: fixed;
 }
 li.current-menu-item {
 background:#00AEEF;
@@ -49,6 +51,8 @@ color: #fff;
 .title{
 	font-size: 140%;
 	font-weight: bold;
+	text-decoration: none;
+	color:#000000;
 }
 header ul{
 	margin:0;
@@ -93,10 +97,49 @@ header li a:hover{
 	height: 100%;
 }
 #w-posts{
-	margin: 20px 0 20px 0;
+	margin: 20px 0.694444444% 20px 0.694444444%;
 	background: rgba(255 , 255, 255, 0.4);
 	border-radius: 10px;
 	padding: 20px;
+}
+#w-posts h2{
+	display: inline;
+}
+.file-box h1, h2 , h3, h4, h5{
+	display: inline;
+}
+
+.file-box{
+  width:100%;
+  height: 60px;
+  margin:10px 0 10px 0;
+  background-color:#FFF;
+  position:relative;
+  border-radius: 10px;
+  color:#bbb;
+  text-shadow: -1px -1px 0px #999;
+}
+.file-box li{
+  list-style:none;
+  bottom:0;
+  height: 100%
+}
+.file-box li h1{
+  font-size:150%;
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+.file-box li a{
+  color:#bbb;
+  text-shadow: -1px -1px 0px #999;
+  text-decoration:none;
+  display: inline;
+  height: 100%;
+  width: 100%;
+}
+.file-categorie a{
+	font-style: italic;
+	color: #000AEF
 }
 .box{
 	width:23.61111111%;
